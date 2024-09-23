@@ -11,63 +11,27 @@
         }
         #map {
             height: 600px;
-            width: 75%;
-            float: left;
+            width: 100%;
         }
-        #legend {
-            float: right;
-            width: 20%;
+        .legend {
+            background: white;
             padding: 10px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
+            line-height: 0.5;
+            font-size: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
-        #legend h2 {
-            font-size: 1.2em;
-        }
-        #legend ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        #legend ul li {
-            margin: 10px 0;
-            display: flex;
-            align-items: center;
-        }
-        #legend ul li img {
-            width: 25px;
-            height: 25px;
-            margin-right: 10px;
+        .legend img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 8px;
         }
     </style>
 </head>
 <body>
     <h1>朋友们&好吃的店</h1>
     <div id="map"></div>
-
-    <!-- 边栏注释 -->
-    <div id="legend">
-        <h2>图标注释</h2>
-        <ul>
-            <li>
-                <img src="https://cdn-icons-png.flaticon.com/512/1629/16292313.png" alt="classmate">
-                同学住址
-            </li>
-            <li>
-                <img src="https://cdn-icons-png.flaticon.com/512/167/167707.png" alt="restaurant">
-                餐厅
-            </li>
-            <li>
-                <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="cake">
-                蛋糕店
-            </li>
-            <li>
-                <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="pizza">
-                披萨店
-            </li>
-            <!-- 你可以继续添加其他图标 -->
-        </ul>
-    </div>
-
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script>
@@ -79,6 +43,26 @@
             maxZoom: 19,
             attribution: '© OpenStreetMap'
         }).addTo(map);
+
+        // 创建图标注释控制层
+        var legend = L.control({ position: 'topright' });
+
+        legend.onAdd = function (map) {
+            var div = L.DomUtil.create('div', 'legend');
+            div.innerHTML += '<h3>图标注释</h3>';
+            div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/2702/2702604.png" alt="classmate"> 同学住址<br>';
+            div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/9237/9237589.png" alt="restaurant"> 中餐<br>';
+            div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/992/992717.png" alt="cake"> 甜品<br>';
+            div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/3170/3170733.png" alt="pizza"> 西餐<br>';
+            div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/450/450098.png" alt="cake"> 烧烤<br>';
+            div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/890/890076.png" alt="pizza"> 火锅<br>';
+            div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/2252/2252075.png" alt="cake"> 日料<br>';
+            // div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="pizza"> 披萨店<br>';
+            
+            return div;
+        };
+
+        legend.addTo(map);
 
         // 自定义同学住址标记（蓝色）
         var classmateIcon_boy = L.icon({
