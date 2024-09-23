@@ -6,12 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <style>
-        #map { height: 600px; width: 100%; }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #map {
+            height: 600px;
+            width: 75%;
+            float: left;
+        }
+        #legend {
+            float: right;
+            width: 20%;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+        #legend h2 {
+            font-size: 1.2em;
+        }
+        #legend ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #legend ul li {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        #legend ul li img {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
     <h1>朋友们&好吃的店</h1>
     <div id="map"></div>
+
+    <!-- 边栏注释 -->
+    <div id="legend">
+        <h2>图标注释</h2>
+        <ul>
+            <li>
+                <img src="https://cdn-icons-png.flaticon.com/512/1629/16292313.png" alt="classmate">
+                同学住址
+            </li>
+            <li>
+                <img src="https://cdn-icons-png.flaticon.com/512/167/167707.png" alt="restaurant">
+                餐厅
+            </li>
+            <li>
+                <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="cake">
+                蛋糕店
+            </li>
+            <li>
+                <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="pizza">
+                披萨店
+            </li>
+            <!-- 你可以继续添加其他图标 -->
+        </ul>
+    </div>
+
+
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script>
         // 初始化地图并设置米兰为中心
@@ -24,9 +81,16 @@
         }).addTo(map);
 
         // 自定义同学住址标记（蓝色）
-        var classmateIcon = L.icon({
-            iconUrl: 'https://cdn-icons-png.flaticon.com/512/252/252025.png', // 替换为合适的蓝色图标
-            iconSize: [25, 35], // 图标大小
+        var classmateIcon_boy = L.icon({
+            iconUrl: 'https://cdn-icons-png.flaticon.com/128/14035/14035451.png', // 替换为合适的蓝色图标
+            iconSize: [25, 30], // 图标大小
+            iconAnchor: [12, 41], // 图标锚点（底部中心）
+            popupAnchor: [0, -41]  // 弹出窗口的锚点
+        });
+
+        var classmateIcon_girl = L.icon({
+            iconUrl: 'https://cdn-icons-png.flaticon.com/128/16760/16760371.png', // 替换为合适的蓝色图标
+            iconSize: [25, 30], // 图标大小
             iconAnchor: [12, 41], // 图标锚点（底部中心）
             popupAnchor: [0, -41]  // 弹出窗口的锚点
         });
@@ -34,28 +98,73 @@
         // 自定义饭店标记（红色）
         var restaurantIcon = L.icon({
             iconUrl: 'https://cdn-icons-png.flaticon.com/512/167/167707.png', // 替换为合适的红色图标
-            iconSize: [25, 35], // 图标大小
+            iconSize: [25, 30], // 图标大小
             iconAnchor: [12, 41], // 图标锚点（底部中心）
             popupAnchor: [0, -41]  // 弹出窗口的锚点
         });
 
-        // 示例：为董卓林同学的住址添加标记
-        var classmateA = L.marker([45.496799703845156, 9.173922015109797], { icon: classmateIcon }).addTo(map)
-            .bindPopup('董zl同学住在这里');
+        var restaurantIcon_hotpot = L.icon({
+            iconUrl: 'https://cdn-icons-png.flaticon.com/128/890/890076.png', // 替换为合适的红色图标
+            iconSize: [25, 25], // 图标大小
+            iconAnchor: [12, 41], // 图标锚点（底部中心）
+            popupAnchor: [0, -41]  // 弹出窗口的锚点
+        });
 
-        // 示例：为另一位同学的住址添加标记
-        var classmateB = L.marker([45.46866345707981, 9.23700488322047], { icon: classmateIcon }).addTo(map)
-            .bindPopup('杨珂同学住在这里');
+        var restaurantIcon_chi_food = L.icon({
+            iconUrl: 'https://cdn-icons-png.flaticon.com/128/9237/9237589.png', // 替换为合适的红色图标
+            iconSize: [25, 25], // 图标大小
+            iconAnchor: [12, 41], // 图标锚点（底部中心）
+            popupAnchor: [0, -41]  // 弹出窗口的锚点
+        });
 
-        // 示例：为另一位同学的住址添加标记
-        var classmateC = L.marker([45.44062275020661, 9.224170466315876], { icon: classmateIcon }).addTo(map)
-            .bindPopup('孙yl同学住在这里');
+        var restaurantIcon_jap_food = L.icon({
+            iconUrl: 'https://cdn-icons-png.flaticon.com/128/2252/2252075.png', // 替换为合适的红色图标
+            iconSize: [25, 25], // 图标大小
+            iconAnchor: [12, 41], // 图标锚点（底部中心）
+            popupAnchor: [0, -41]  // 弹出窗口的锚点
+        });
 
-        var classmateC = L.marker([45.43671096281957, 9.216743129922824], { icon: classmateIcon }).addTo(map)
-            .bindPopup('夏yz同学住在这里');
+        var restaurantIcon_barbeque = L.icon({
+            iconUrl: 'https://cdn-icons-png.flaticon.com/128/450/450098.png', // 替换为合适的红色图标
+            iconSize: [25, 25], // 图标大小
+            iconAnchor: [12, 41], // 图标锚点（底部中心）
+            popupAnchor: [0, -41]  // 弹出窗口的锚点
+        });
+
+        var restaurantIcon_dessert = L.icon({
+            iconUrl: 'https://cdn-icons-png.flaticon.com/128/992/992717.png', // 替换为合适的红色图标
+            iconSize: [20, 20], // 图标大小
+            iconAnchor: [12, 41], // 图标锚点（底部中心）
+            popupAnchor: [0, -41]  // 弹出窗口的锚点
+        });
+
+        var restaurantIcon_west_food = L.icon({
+            iconUrl: 'https://cdn-icons-png.flaticon.com/128/3170/3170733.png', // 替换为合适的红色图标
+            iconSize: [25, 25], // 图标大小
+            iconAnchor: [12, 41], // 图标锚点（底部中心）
+            popupAnchor: [0, -41]  // 弹出窗口的锚点
+        });
+
+
         
-        var classmateC = L.marker([45.5279668135674, 9.160844184448884], { icon: classmateIcon }).addTo(map)
-            .bindPopup('潘cy同学住在这里');
+
+        // 示例：为董卓林同学的住址添加标记
+        var classmateA = L.marker([45.496799703845156, 9.173922015109797], { icon: classmateIcon_boy }).addTo(map)
+            .bindPopup('Who lives here?<br>董zl');
+
+        // 示例：为另一位同学的住址添加标记
+        var classmateB = L.marker([45.46866345707981, 9.23700488322047], { icon: classmateIcon_girl }).addTo(map)
+            .bindPopup('Who lives here?<br>杨珂hy, 王hy');
+
+        // 示例：为另一位同学的住址添加标记
+        var classmateC = L.marker([45.44062275020661, 9.224170466315876], { icon: classmateIcon_girl }).addTo(map)
+            .bindPopup('Who lives here?<br>王xy, 黄dd, 孙yl, and 2 girls');
+
+        var classmateC = L.marker([45.43671096281957, 9.216743129922824], { icon: classmateIcon_boy }).addTo(map)
+            .bindPopup('Who lives here?<br>夏yz, 王zk, 詹wx');
+        
+        var classmateC = L.marker([45.5279668135674, 9.160844184448884], { icon: classmateIcon_boy }).addTo(map)
+            .bindPopup('Who lives here?<br>潘cy, 孙lx, 程yx, 张xl');
 
         // var classmateC = L.marker([45.5279668135674, 9.160844184448884], { icon: classmateIcon }).addTo(map)
         //     .bindPopup('潘cy同学住在这里');
@@ -64,38 +173,38 @@
         
 
         // 示例：为餐厅 启运东北菜 添加标记
-        var restaurantA = L.marker([45.493556312956336, 9.184104937346863], { icon: restaurantIcon }).addTo(map)
+        var restaurantA = L.marker([45.493556312956336, 9.184104937346863], { icon: restaurantIcon_chi_food }).addTo(map)
             .bindPopup('中餐：启运东北菜(锅包肉，溜肉段，铁锅炖），约15欧/人');
 
         // 示例：为另一家餐厅添加标记
-        var RestaurantB = L.marker([45.47897917164505, 9.215097013903481], { icon: restaurantIcon }).addTo(map)
+        var RestaurantB = L.marker([45.47897917164505, 9.215097013903481], { icon: restaurantIcon_chi_food }).addTo(map)
             .bindPopup('中餐：嗦粉店(不止嗦粉），9欧/人');
 
-        var RestaurantC = L.marker([45.48201811928995, 9.180043996715243], { icon: restaurantIcon }).addTo(map)
+        var RestaurantC = L.marker([45.48201811928995, 9.180043996715243], { icon: restaurantIcon_barbeque }).addTo(map)
             .bindPopup('烤肉自助：限时90min，35-40欧/人');
 
-        var RestaurantD = L.marker([45.48082953021911, 9.181422418803436], { icon: restaurantIcon }).addTo(map)
+        var RestaurantD = L.marker([45.48082953021911, 9.181422418803436], { icon: restaurantIcon_chi_food }).addTo(map)
             .bindPopup('中餐：xhs排名第一，15欧/人');
 
-        var RestaurantE = L.marker([45.47344412263926, 9.230525655823437], { icon: restaurantIcon }).addTo(map)
+        var RestaurantE = L.marker([45.47344412263926, 9.230525655823437], { icon: restaurantIcon_dessert }).addTo(map)
             .bindPopup('甜点店：提拉米苏，椰子味的都好吃，老板娘不会英语，1-10欧/人');
     
-        var RestaurantF = L.marker([45.468969354748175, 9.223363087711407], { icon: restaurantIcon }).addTo(map)
+        var RestaurantF = L.marker([45.468969354748175, 9.223363087711407], { icon: restaurantIcon_west_food }).addTo(map)
             .bindPopup('西餐：auum，单点，中午的商务套餐都不错，巨大份，20-30欧/人');
 
-        var RestaurantG = L.marker([45.488737628854345, 9.203944096715551], { icon: restaurantIcon }).addTo(map)
+        var RestaurantG = L.marker([45.488737628854345, 9.203944096715551], { icon: restaurantIcon_west_food }).addTo(map)
             .bindPopup('西餐：le chalet，国人开的意大利菜，20-30欧/人');
-        var RestaurantF = L.marker([45.49475794825167, 9.184851722092702], { icon: restaurantIcon }).addTo(map)
+        var RestaurantF = L.marker([45.49475794825167, 9.184851722092702], { icon: restaurantIcon_jap_food }).addTo(map)
             .bindPopup('日料：Kaori，30-40欧/人');
 
-        var RestaurantH = L.marker([45.48625741055127, 9.223072283221393], { icon: restaurantIcon }).addTo(map)
+        var RestaurantH = L.marker([45.48625741055127, 9.223072283221393], { icon: restaurantIcon_chi_food }).addTo(map)
             .bindPopup('中餐：老孙家，10-20欧/人');
-        var RestaurantI = L.marker([45.48680538348697, 9.218269840892003], { icon: restaurantIcon }).addTo(map)
+        var RestaurantI = L.marker([45.48680538348697, 9.218269840892003], { icon: restaurantIcon_chi_food }).addTo(map)
             .bindPopup('中餐：西安，陕味，10-20欧/人');
 
-        var RestaurantJ = L.marker([45.48260653357427, 9.178529645791674], { icon: restaurantIcon }).addTo(map)
+        var RestaurantJ = L.marker([45.48260653357427, 9.178529645791674], { icon: restaurantIcon_hotpot }).addTo(map)
             .bindPopup('火锅：重庆妈妈，30-40欧/人');
-        var RestaurantK = L.marker([45.500246621662896, 9.198262549076409], { icon: restaurantIcon }).addTo(map)
+        var RestaurantK = L.marker([45.500246621662896, 9.198262549076409], { icon: restaurantIcon_barbeque }).addTo(map)
             .bindPopup('巴西烤肉：Barbacoa，70-80欧/人');
 
         // var RestaurantJ = L.marker([45.468969354748175, 9.223363087711407], { icon: restaurantIcon }).addTo(map)
