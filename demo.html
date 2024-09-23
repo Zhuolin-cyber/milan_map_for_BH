@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>米兰蹭饭图</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map { height: 600px; width: 100%; }
+    </style>
+</head>
+<body>
+    <h1>朋友们&好吃的店</h1>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // 初始化地图并设置米兰为中心
+        var map = L.map('map').setView([45.4642, 9.19], 13);
+        
+        // 使用 OpenStreetMap 图层
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        // 自定义同学住址标记（蓝色）
+        var classmateIcon = L.icon({
+            iconUrl: 'https://cdn-icons-png.flaticon.com/512/252/252025.png', // 替换为合适的蓝色图标
+            iconSize: [25, 35], // 图标大小
+            iconAnchor: [12, 41], // 图标锚点（底部中心）
+            popupAnchor: [0, -41]  // 弹出窗口的锚点
+        });
+
+        // 自定义饭店标记（红色）
+        var restaurantIcon = L.icon({
+            iconUrl: 'https://cdn-icons-png.flaticon.com/512/167/167707.png', // 替换为合适的红色图标
+            iconSize: [25, 35], // 图标大小
+            iconAnchor: [12, 41], // 图标锚点（底部中心）
+            popupAnchor: [0, -41]  // 弹出窗口的锚点
+        });
+
+        // 示例：为董卓林同学的住址添加标记
+        var classmateA = L.marker([45.496799703845156, 9.173922015109797], { icon: classmateIcon }).addTo(map)
+            .bindPopup('董zl同学住在这里');
+
+        // 示例：为另一位同学的住址添加标记
+        var classmateB = L.marker([45.46866345707981, 9.23700488322047], { icon: classmateIcon }).addTo(map)
+            .bindPopup('杨珂同学住在这里');
+
+        // 示例：为另一位同学的住址添加标记
+        var classmateC = L.marker([45.44062275020661, 9.224170466315876], { icon: classmateIcon }).addTo(map)
+            .bindPopup('孙yl同学住在这里');
+
+        var classmateC = L.marker([45.43671096281957, 9.216743129922824], { icon: classmateIcon }).addTo(map)
+            .bindPopup('夏yz同学住在这里');
+        
+        var classmateC = L.marker([45.5279668135674, 9.160844184448884], { icon: classmateIcon }).addTo(map)
+            .bindPopup('潘cy同学住在这里');
+
+        // var classmateC = L.marker([45.5279668135674, 9.160844184448884], { icon: classmateIcon }).addTo(map)
+        //     .bindPopup('潘cy同学住在这里');
+        // var classmateC = L.marker([45.5279668135674, 9.160844184448884], { icon: classmateIcon }).addTo(map)
+        //     .bindPopup('潘cy同学住在这里');
+        
+
+        // 示例：为餐厅 启运东北菜 添加标记
+        var restaurantA = L.marker([45.493556312956336, 9.184104937346863], { icon: restaurantIcon }).addTo(map)
+            .bindPopup('中餐：启运东北菜(锅包肉，溜肉段，铁锅炖），约15欧/人');
+
+        // 示例：为另一家餐厅添加标记
+        var RestaurantB = L.marker([45.47897917164505, 9.215097013903481], { icon: restaurantIcon }).addTo(map)
+            .bindPopup('中餐：嗦粉店(不止嗦粉），9欧/人');
+
+        var RestaurantC = L.marker([45.48201811928995, 9.180043996715243], { icon: restaurantIcon }).addTo(map)
+            .bindPopup('烤肉自助：限时90min，35-40欧/人');
+
+        var RestaurantD = L.marker([45.48082953021911, 9.181422418803436], { icon: restaurantIcon }).addTo(map)
+            .bindPopup('中餐：xhs排名第一，15欧/人');
+
+        var RestaurantE = L.marker([45.47344412263926, 9.230525655823437], { icon: restaurantIcon }).addTo(map)
+            .bindPopup('甜点店：提拉米苏，椰子味的都好吃，老板娘不会英语，1-10欧/人');
+    
+        var RestaurantF = L.marker([45.468969354748175, 9.223363087711407], { icon: restaurantIcon }).addTo(map)
+            .bindPopup('西餐：auum，单点，中午的商务套餐都不错，巨大份，20-30欧/人');
+
+        var RestaurantG = L.marker([45.488737628854345, 9.203944096715551], { icon: restaurantIcon }).addTo(map)
+            .bindPopup('西餐：le chalet，国人开的意大利菜，20-30欧/人');
+        var RestaurantF = L.marker([45.49475794825167, 9.184851722092702], { icon: restaurantIcon }).addTo(map)
+            .bindPopup('日料：Kaori，30-40欧/人');
+
+        var RestaurantH = L.marker([45.48625741055127, 9.223072283221393], { icon: restaurantIcon }).addTo(map)
+            .bindPopup('中餐：老孙家，10-20欧/人');
+        var RestaurantI = L.marker([45.48680538348697, 9.218269840892003], { icon: restaurantIcon }).addTo(map)
+            .bindPopup('中餐：西安，陕味，10-20欧/人');
+
+        var RestaurantJ = L.marker([45.48260653357427, 9.178529645791674], { icon: restaurantIcon }).addTo(map)
+            .bindPopup('火锅：重庆妈妈，30-40欧/人');
+        var RestaurantK = L.marker([45.500246621662896, 9.198262549076409], { icon: restaurantIcon }).addTo(map)
+            .bindPopup('巴西烤肉：Barbacoa，70-80欧/人');
+
+        // var RestaurantJ = L.marker([45.468969354748175, 9.223363087711407], { icon: restaurantIcon }).addTo(map)
+        //     .bindPopup('西餐：auum，单点，中午的商务套餐都不错，巨大份，20-30欧/人');
+        // var RestaurantK = L.marker([45.468969354748175, 9.223363087711407], { icon: restaurantIcon }).addTo(map)
+        //     .bindPopup('西餐：auum，单点，中午的商务套餐都不错，巨大份，20-30欧/人');
+        // var RestaurantL = L.marker([45.468969354748175, 9.223363087711407], { icon: restaurantIcon }).addTo(map)
+        //     .bindPopup('西餐：auum，单点，中午的商务套餐都不错，巨大份，20-30欧/人');
+        // var RestaurantM = L.marker([45.468969354748175, 9.223363087711407], { icon: restaurantIcon }).addTo(map)
+        //     .bindPopup('西餐：auum，单点，中午的商务套餐都不错，巨大份，20-30欧/人');
+        
+
+        
+
+        
+    </script>
+    <!-- <script>
+        // 示例：页面加载时显示一个欢迎消息
+        // 此处有必要，在这里我可以告诉别人这个地图的相关内容，作者信息
+        window.onload = function() {
+            alert('欢迎使用米兰同学地图！');
+        };
+    </script> -->
+</body>
+</html>
