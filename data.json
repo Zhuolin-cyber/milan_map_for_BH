@@ -1,0 +1,141 @@
+{
+    "classmates": [
+      {
+        "name": "董zl",
+        "location": [45.496799703845156, 9.173922015109797],
+        "type": "男生"
+      },
+      {
+        "name": "杨珂hy, 王hy",
+        "location": [45.46866345707981, 9.23700488322047],
+        "type": "女生"
+      },
+      {
+        "name": "王xy, 黄dd, 孙yl, and 2 girls",
+        "location": [45.44062275020661, 9.224170466315876],
+        "type": "女生"
+      },
+      {
+        "name": "夏yz, 王zk, 詹wx",
+        "location": [45.43671096281957, 9.216743129922824],
+        "type": "男生"
+      },
+      {
+        "name": "潘cy, 孙lx, 程yx, 张xl",
+        "location": [45.5279668135674, 9.160844184448884],
+        "type": "男生"
+      },
+      {
+        "name": "秦ym",
+        "location": [45.52194779143026, 9.141653381417568],
+        "type": "女生"
+      }
+    ],
+    "restaurants": [
+    {
+      "name": "启运东北菜",
+      "location": [45.493556312956336, 9.184104937346863],
+      "type": "东北菜",
+      "address": "Via Lepontina, 11, 20159",
+      "description": "锅包肉，溜肉段，铁锅炖",
+      "price": "约15欧/人"
+    },
+    {
+      "name": "Ristorante Fortuna",
+      "location": [45.47897917164505, 9.215097013903481],
+      "type": "东北菜",
+      "address": "Via Bartolomeo Eustachi, 20129",
+      "description": "嗦粉店(不止嗦粉）",
+      "price": "9欧/人"
+    },
+    {
+      "name": "HARO BBQ",
+      "location": [45.48201811928995, 9.180043996715243],
+      "type": "烤肉",
+      "address": "Via Paolo Sarpi, 6, 20154",
+      "description": "牛柳，五花，限时90min",
+      "price": "35-40欧/人"
+    },
+    {
+      "name": "CHIFA RESTAURANT",
+      "location": [45.48082953021911, 9.181422418803436],
+      "type": "东北菜",
+      "address": "Viale Montello, 5, 20154",
+      "description": "xhs排名第一",
+      "price": "15欧/人"
+    },
+    {
+      "name": "Gelateria Gorini con dehors",
+      "location": [45.47344412263926, 9.230525655823437],
+      "type": "甜品",
+      "address": "Piazzale Paolo Gorini, 10, 20133",
+      "description": "提拉米苏，椰子味的都好吃，老板娘不会英语",
+      "price": "1-10欧/人"
+    },
+    {
+      "name": "AUuM (Piazzale Susa)",
+      "location": [45.468969354748175, 9.223363087711407],
+      "type": "西餐",
+      "address": "Piazzale Susa, 7, 20133",
+      "description": "单点，中午的商务套餐都不错，巨大份",
+      "price": "20-30欧/人"
+    },
+    {
+      "name": "Le Chalet",
+      "location": [45.488737628854345, 9.203944096715551],
+      "type": "西餐",
+      "address": "Via ponte seveso 18, Via Tonale, 6, 20125",
+      "description": "国人开的意大利菜，适合中国宝宝",
+      "price": "西餐：20-30欧/人"
+    },
+    {
+      "name": "Kaori Japanese Restaurant",
+      "location": [45.49475794825167, 9.184851722092702],
+      "type": "日料",
+      "address": "Viale Stelvio, 51, 20159",
+      "description": "学长推荐",
+      "price": "30-40欧/人"
+    },
+    {
+      "name": "老孙家餐厅",
+      "location": [45.48625741055127, 9.223072283221393],
+      "type": "东北菜",
+      "address": "Via Nicola Antonio Porpora, 59, 20131",
+      "description": "学长推荐",
+      "price": "10-20欧/人"
+    },
+    {
+      "name": "西安 (Loreto)",
+      "location": [45.48680538348697, 9.218269840892003],
+      "type": "东北菜",
+      "address": "Via Andrea Costa, 1, 20131",
+      "description": "陕味，学长推荐",
+      "price": "10-20欧/人"
+    },
+    {
+      "name": "重庆妈妈火锅店",
+      "location": [45.48260653357427, 9.178529645791674],
+      "type": "火锅",
+      "address": "Via Bramante, 35, 20154",
+      "description": "汝钧学长吃烤肉时都会惦记的店",
+      "price": "30-40欧/人"
+    },
+    {
+      "name": "Barbacoa Milano",
+      "location": [45.500246621662896, 9.198262549076409],
+      "type": "烤肉",
+      "address": "Via Scipio Slataper, 19, 20125",
+      "description": "学长推荐，贵",
+      "price": "巴西烤肉：70-80欧/人"
+    },
+    {
+      "name": "Sagapò Greek Street Food",
+      "location": [45.50466748577443, 9.164362611579634],
+      "type": "西餐",
+      "address": "Via Don Giuseppe Andreoli, 7, 20158 Milano MI",
+      "description": "希腊餐厅，卷饼加的酱味重些",
+      "price": "10-20欧/人"
+    }
+  ]
+  }
+  
