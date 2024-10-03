@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>米兰蹭饭图</title>
+    <title>米兰干饭图</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" /> <!-- 引入外部样式文件 -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
+
 </head>
 <body>
     <h1>朋友们&好吃的店</h1>
     
-    
     <div id="map"></div> <!-- 地图区域 -->
-    <button id="openFormBtn" style="position: absolute; top: 20px; right: 20px; z-index: 100;">提交信息</button>
+    <button id="openFormBtn" style="position: absolute; top: 25px; right: 20px; z-index: 100;" data-color="primary">帮助</button>
 
     <!-- 提交信息的弹出表单 -->
     <div id="formPopup">
-        <h2>提交你的信息</h2>
+        <h3>NEED YOUR “帮助”</h3>
         <form id="submissionForm">
             <label for="name">姓名:</label><br>
             <input type="text" id="name" name="name" required><br><br>
 
-            <label for="location">地点名称:</label><br>
+            <label for="location">好店名称</label><br>
             <input type="text" id="location" name="location" required><br><br>
 
-            <label for="description">描述:</label><br>
+            <label for="description">这家店的特色？</label><br>
             <textarea id="description" name="description" rows="4" cols="30" required></textarea><br><br>
 
-            <button type="submit">提交</button>
-            <button type="button" id="closeFormBtn">取消</button>
+            <button type="submit" data-color="primary">告诉我</button>
+            <button type="button" id="closeFormBtn" data-color="secondary">等我探探</button>
         </form>
     </div>
 

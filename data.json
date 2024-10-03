@@ -26,6 +26,11 @@
         "type": "男生"
       },
       {
+        "name": "许xl",
+        "location": [45.48756295994461, 9.209714083492583],
+        "type": "男生"
+      },
+      {
         "name": "秦ym",
         "location": [45.52194779143026, 9.141653381417568],
         "type": "女生"
@@ -35,7 +40,7 @@
     {
       "name": "启运东北菜",
       "location": [45.493556312956336, 9.184104937346863],
-      "type": "东北菜",
+      "type": "中餐",
       "address": "Via Lepontina, 11, 20159",
       "description": "锅包肉，溜肉段，铁锅炖",
       "price": "约15欧/人"
@@ -43,7 +48,7 @@
     {
       "name": "Ristorante Fortuna",
       "location": [45.47897917164505, 9.215097013903481],
-      "type": "东北菜",
+      "type": "中餐",
       "address": "Via Bartolomeo Eustachi, 20129",
       "description": "嗦粉店(不止嗦粉）",
       "price": "9欧/人"
@@ -59,7 +64,7 @@
     {
       "name": "CHIFA RESTAURANT",
       "location": [45.48082953021911, 9.181422418803436],
-      "type": "东北菜",
+      "type": "中餐",
       "address": "Viale Montello, 5, 20154",
       "description": "xhs排名第一",
       "price": "15欧/人"
@@ -99,7 +104,7 @@
     {
       "name": "老孙家餐厅",
       "location": [45.48625741055127, 9.223072283221393],
-      "type": "东北菜",
+      "type": "中餐",
       "address": "Via Nicola Antonio Porpora, 59, 20131",
       "description": "学长推荐",
       "price": "10-20欧/人"
@@ -107,7 +112,7 @@
     {
       "name": "西安 (Loreto)",
       "location": [45.48680538348697, 9.218269840892003],
-      "type": "东北菜",
+      "type": "中餐",
       "address": "Via Andrea Costa, 1, 20131",
       "description": "陕味，学长推荐",
       "price": "10-20欧/人"
@@ -133,6 +138,14 @@
       "location": [45.50466748577443, 9.164362611579634],
       "type": "西餐",
       "address": "Via Don Giuseppe Andreoli, 7, 20158 Milano MI",
+      "description": "希腊餐厅，卷饼加的酱味重些",
+      "price": "10-20欧/人"
+    },
+    {
+      "name": "Pan Sushi",
+      "location": [45.50257818079632, 9.156919696986217],
+      "type": "中餐",
+      "address": "Via Raffaele Lambruschini, 7, 20156 Milano MI",
       "description": "希腊餐厅，卷饼加的酱味重些",
       "price": "10-20欧/人"
     }

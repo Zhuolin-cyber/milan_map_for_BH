@@ -63,7 +63,7 @@ var legend = L.control({ position: 'topright' });
 
 legend.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'legend');
-    div.innerHTML += '<h3>图标注释</h3>';
+    div.innerHTML += '<h6 class="legend-title">图标注释</h6>';
     div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/2702/2702604.png" alt="classmate"> 同学住址<br>';
     div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/9237/9237589.png" alt="restaurant"> 中餐<br>';
     div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/992/992717.png" alt="cake"> 甜品<br>';
@@ -81,7 +81,7 @@ legend.addTo(map);
 
 // 预定义的图标
 var restaurantIcons = {
-  "东北菜": L.icon({
+  "中餐": L.icon({
       iconUrl: 'https://cdn-icons-png.flaticon.com/128/9237/9237589.png',
       iconSize: [25, 25],
       iconAnchor: [12, 41],
