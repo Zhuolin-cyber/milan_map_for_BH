@@ -57,6 +57,17 @@ submissionForm.addEventListener('submit', function(event) {
     alert('信息已提交！');
 });
 
+function toggleNearbyAddress() {
+    var shareAddress = document.getElementById("shareAddress").value;
+    var nearbyAddressContainer = document.getElementById("nearbyAddressContainer");
+    
+    if (shareAddress === "yes") {
+        nearbyAddressContainer.style.display = "block";
+    } else {
+        nearbyAddressContainer.style.display = "none";
+    }
+}
+
 
 // 创建图标注释控制层
 var legend = L.control({ position: 'topright' });
@@ -140,18 +151,13 @@ var classmates = {
   }),
 };
 
+// 密码保护功能
+const correctPassword = "dongzhuolin";  
+
 // 加载 JSON 数据
 fetch('data.json')
   .then(response => response.json())
   .then(data => {
-    // 添加同学住址标记
-    data.classmates.forEach(classmate => {
-      cate = classmate.type
-      L.marker(classmate.location, { icon: classmates[cate] })
-        .addTo(map)
-        .bindPopup(`Who lives here?<br>${classmate.name}`);
-  });
-
     // 添加饭店标记
     data.restaurants.forEach(restaurant => {
       // 获取餐厅的类型
@@ -163,6 +169,24 @@ fetch('data.json')
       L.marker(restaurant.location, { icon: icon })
         .addTo(map)
         .bindPopup(`店名：${restaurant.name}<br>地址：${restaurant.address}<br>特色：${restaurant.description}<br>价格：${restaurant.price}`);
+    });
+
+    // 当点击按钮时，触发密码验证并显示同学住址
+    document.getElementById("showAddressBtn").addEventListener("click", () => {
+      const inputPassword = prompt("请输入密码查看同学住址：");
+
+      if (inputPassword === correctPassword) {
+        // 添加同学住址标记
+        data.classmates.forEach(classmate => {
+          const cate = classmate.type;
+          L.marker(classmate.location, { icon: classmates[cate] })
+            .addTo(map)
+            .bindPopup(`Who lives here?<br>${classmate.name}`);
+        });
+        alert("住址已显示！");
+      } else {
+        alert("密码错误，无法显示住址。");
+      }
     });
   })
   .catch(error => {

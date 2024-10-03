@@ -13,13 +13,14 @@
     <h1>朋友们&好吃的店</h1>
     
     <div id="map"></div> <!-- 地图区域 -->
-    <button id="openFormBtn" style="position: absolute; top: 25px; right: 20px; z-index: 100;" data-color="primary">帮助</button>
+    <button id="openFormBtn" style="position: absolute; top: 5px; right: 10px; z-index: 100;" data-color="primary">帮助</button>
+    <button id="showAddressBtn" style="position: absolute; top: 6px; right: 70px; z-index: 100;" >显示住址</button>
 
     <!-- 提交信息的弹出表单 -->
     <div id="formPopup">
         <h3>NEED YOUR “帮助”</h3>
         <form id="submissionForm">
-            <label for="name">姓名:</label><br>
+            <label for="name">你的称呼？</label><br>
             <input type="text" id="name" name="name" required><br><br>
 
             <label for="location">好店名称</label><br>
@@ -27,7 +28,7 @@
 
             <label for="description">这家店的特色？</label><br>
             <textarea id="description" name="description" rows="4" cols="30" required></textarea><br><br>
-
+            
             <button type="submit" data-color="primary">告诉我</button>
             <button type="button" id="closeFormBtn" data-color="secondary">等我探探</button>
         </form>
