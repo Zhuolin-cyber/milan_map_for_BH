@@ -35,7 +35,7 @@ submissionForm.addEventListener('submit', function(event) {
     };
 
     // 在这里发送表单数据到服务器（这部分代码可以调整为实际的提交逻辑）
-    fetch('https://milan-map-for-bh.onrender.com/submit', {  // 替换为你服务器的地址
+    fetch('http://8.147.131.246:5000/submit', {  // 替换为你服务器的地址
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

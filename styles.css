@@ -119,7 +119,7 @@ button:hover {
 
 /* 根据 data-color 属性设置不同背景色 */
 button[data-color="primary"] {
-    background-color: #007aff;  /* 设置为橙色 */
+    background-color: #007aff;  /* 设置为蓝色 */
     border: 1px solid #007aff;  /* 添加蓝色的边框 */
     color: white;
 }
