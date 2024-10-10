@@ -31,7 +31,7 @@ def submit_form():
 # 定时请求自身服务器以保持活跃
 def keep_alive():
     try:
-        requests.get("http://8.147.131.246:5000/submit")
+        requests.get("https://8.147.131.246:5000/submit")
         print("Sent keep-alive request to the server")
     except Exception as e:
         print(f"Error sending keep-alive request: {e}")
