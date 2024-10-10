@@ -9,7 +9,7 @@ import random
 import json
 
 app = Flask(__name__)
-CORS(app, resources={r"/submit": {"origins": "https://zhuolin-cyber.github.io"}})
+CORS(app, resources={r"/submit": {"origins": "*"}})
 
 
 # 定义一个路由，用于接收表单提交的数据
