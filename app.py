@@ -59,4 +59,4 @@ if __name__ == '__main__':
     scheduler_thread.start()
 
     port = int(os.environ.get('PORT', 5000))  # 从环境变量获取端口，默认为 5000
-    app.run(host='0.0.0.0', port=port)  # 监听所有公网 IP 地址
+    app.run(host='0.0.0.0', port=port, ssl_context=('cert.pem', 'key.pem'))  # 监听所有公网 IP 地址
