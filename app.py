@@ -6,6 +6,7 @@ import time
 import requests
 from threading import Thread
 import random
+import json
 
 app = Flask(__name__)
 CORS(app)  # 启用 CORS 支持
@@ -23,6 +24,23 @@ def submit_form():
 
     # 在这里可以对数据进行处理，例如存储在文件、数据库或发送邮件
     print(f"收到提交信息: 姓名={name}, 地点={location}, 描述={description}")
+
+    # 构造要保存的字典信息
+    try:
+        data = {
+            "name": name,
+            "location": "",
+            "type": "",  # 若类型为空则存空字符串
+            "address": location or "",  # 若地址为空则存空字符串
+            "description": description or "",  # 若描述为空则存空字符串
+            "price": ""  # 若价格为空则存空字符串
+        }
+    except:
+        pass
+    # 保存为 JSON 格式到 txt 文件中
+    file_path = os.path.join(os.getcwd(), 'submitted_info.txt')  # 当前文件夹
+    with open(file_path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
 
     # 可以返回给前端一些信息，告知提交成功
     return jsonify({"message": "提交成功", "status": "success"}), 200
@@ -59,4 +77,4 @@ if __name__ == '__main__':
     scheduler_thread.start()
 
     port = int(os.environ.get('PORT', 5000))  # 从环境变量获取端口，默认为 5000
-    app.run(host='0.0.0.0', port=port, ssl_context=('cert.pem', 'key.pem'))  # 监听所有公网 IP 地址
+    app.run(host='0.0.0.0', port=port)  # 监听所有公网 IP 地址
