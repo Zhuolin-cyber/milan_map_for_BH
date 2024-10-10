@@ -19,8 +19,6 @@ def submit_form():
     # 获取具体字段的数据
     name = data.get('name')
     location = data.get('location')
-    lat = data.get('lat')
-    lon = data.get('lon')
     description = data.get('description')
 
     # 在这里可以对数据进行处理，例如存储在文件、数据库或发送邮件
@@ -33,7 +31,7 @@ def submit_form():
 # 定时请求自身服务器以保持活跃
 def keep_alive():
     try:
-        requests.get("https://milan-map-for-bh.onrender.com/submit")
+        requests.get("http://8.147.131.246:5000/submit")
         print("Sent keep-alive request to the server")
     except Exception as e:
         print(f"Error sending keep-alive request: {e}")
@@ -41,8 +39,8 @@ def keep_alive():
 # 动态调整的调度任务
 def dynamic_schedule():
     while True:
-        # 生成 1 到 10 之间的随机数作为等待时间
-        wait_time = random.randint(1, 10)
+        # 生成 1 到 2 之间的随机数作为等待时间
+        wait_time = random.randint(1, 2)
         print(f"Next request in {wait_time} minutes...")
         schedule.every(wait_time).minutes.do(keep_alive)
 

@@ -148,6 +148,22 @@
       "address": "Via Raffaele Lambruschini, 7, 20156 Milano MI",
       "description": "好吃实惠，适合学生",
       "price": "6-9欧/人"
+    },
+    {
+      "name": "东北小菜 Dongbei Food",
+      "location": [45.481669674108694, 9.172843968149463],
+      "type": "中餐",
+      "address": "Via Paolo Lomazzo, 10, 20154 Milano MI",
+      "description": "凉菜卤味",
+      "price": "9欧/人"
+    },
+    {
+      "name": "Xiao Hutong",
+      "location": [45.48138556457663, 9.17265106814949],
+      "type": "中餐",
+      "address": "Via Paolo Sarpi, 50, 20154 Milano MI",
+      "description": "特别特别特别好吃的麻辣烫，能加卤鸡爪",
+      "price": "10-15欧/人"
     }
   ]
   }
