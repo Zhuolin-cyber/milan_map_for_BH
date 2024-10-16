@@ -164,6 +164,22 @@
       "address": "Via Paolo Sarpi, 50, 20154 Milano MI",
       "description": "特别特别特别好吃的麻辣烫，能加卤鸡爪",
       "price": "10-15欧/人"
+    },
+    {
+      "name": "Tender",
+      "location": [45.49574194754968, 9.216732459208222],
+      "type": "西餐",
+      "address": "Piazza Morbegno, 20127 Milano MI",
+      "description": "happy hour是吃过最好的",
+      "price": "10-15欧/人"
+    },
+    {
+      "name": "Restaurant Ma La Tang North Gate",
+      "location": [45.49323212863532, 9.218968076921437],
+      "type": "中餐",
+      "address": "Viale Monza, 50, 20127 Milano MI",
+      "description": "回国的感觉",
+      "price": "10-20欧/人"
     }
   ]
   }
