@@ -73,8 +73,8 @@ def dynamic_schedule():
 # 启动服务器
 if __name__ == '__main__':
     # 启动定时器线程
-    scheduler_thread = Thread(target=dynamic_schedule)
-    scheduler_thread.start()
+    # scheduler_thread = Thread(target=dynamic_schedule)
+    # scheduler_thread.start()
 
     port = int(os.environ.get('PORT', 5000))  # 从环境变量获取端口，默认为 5000
     app.run(host='0.0.0.0', port=port)  # 监听所有公网 IP 地址

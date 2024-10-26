@@ -35,26 +35,30 @@ submissionForm.addEventListener('submit', function(event) {
     };
 
     // 在这里发送表单数据到服务器（这部分代码可以调整为实际的提交逻辑）
-    fetch('https://milano-map-dzl.asia/submit', {  // 替换为你服务器的地址
+    fetch('https://milano-map-dzl.asia/submit', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(formData)
     })
-    .then(response => response.json())
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error('Network response was not ok');
+        }
+    })
     .then(data => {
         console.log('提交成功:', data);
         alert('信息已提交！');
+        formPopup.style.display = 'none';
     })
     .catch(error => {
         console.error('提交失败:', error);
         alert('提交失败，请重试。');
     });
-
-    // 提交成功后隐藏表单
-    formPopup.style.display = 'none';
-    alert('信息已提交！');
+    
 });
 
 function toggleNearbyAddress() {
