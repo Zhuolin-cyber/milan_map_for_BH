@@ -82,10 +82,12 @@ legend.onAdd = function (map) {
     div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/2702/2702604.png" alt="classmate"> 同学住址<br>';
     div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/9237/9237589.png" alt="restaurant"> 中餐<br>';
     div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/992/992717.png" alt="cake"> 甜品<br>';
-    div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/3170/3170733.png" alt="pizza"> 西餐<br>';
+    div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/2872/2872222.png" alt="pizza"> 西餐<br>';
     div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/450/450098.png" alt="cake"> 烧烤<br>';
     div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/890/890076.png" alt="pizza"> 火锅<br>';
     div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/2252/2252075.png" alt="cake"> 日料<br>';
+    div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/3084/3084875.png" alt="cake"> 汤面<br>';
+    
     // div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="pizza"> 披萨店<br>';
     
     return div;
@@ -98,6 +100,12 @@ legend.addTo(map);
 var restaurantIcons = {
   "中餐": L.icon({
       iconUrl: 'https://cdn-icons-png.flaticon.com/128/9237/9237589.png',
+      iconSize: [25, 25],
+      iconAnchor: [12, 41],
+      popupAnchor: [0, -41]
+  }),
+  "汤面": L.icon({
+      iconUrl: 'https://cdn-icons-png.flaticon.com/128/3084/3084875.png',
       iconSize: [25, 25],
       iconAnchor: [12, 41],
       popupAnchor: [0, -41]
@@ -127,7 +135,7 @@ var restaurantIcons = {
       popupAnchor: [0, -41]
   }),
   "西餐": L.icon({
-      iconUrl: 'https://cdn-icons-png.flaticon.com/128/3170/3170733.png',
+      iconUrl: 'https://cdn-icons-png.flaticon.com/128/2872/2872222.png',
       iconSize: [25, 25],
       iconAnchor: [12, 41],
       popupAnchor: [0, -41]

@@ -48,7 +48,7 @@
     {
       "name": "Ristorante Fortuna",
       "location": [45.47897917164505, 9.215097013903481],
-      "type": "中餐",
+      "type": "汤面",
       "address": "Via Bartolomeo Eustachi, 20129",
       "description": "嗦粉店(不止嗦粉）",
       "price": "9欧/人"
@@ -114,7 +114,7 @@
       "location": [45.48680538348697, 9.218269840892003],
       "type": "中餐",
       "address": "Via Andrea Costa, 1, 20131",
-      "description": "陕味，学长推荐",
+      "description": "陕味，小炒羊肉泡馍，绝了",
       "price": "10-20欧/人"
     },
     {
@@ -160,7 +160,7 @@
     {
       "name": "Xiao Hutong",
       "location": [45.48138556457663, 9.17265106814949],
-      "type": "中餐",
+      "type": "汤面",
       "address": "Via Paolo Sarpi, 50, 20154 Milano MI",
       "description": "特别特别特别好吃的麻辣烫，能加卤鸡爪",
       "price": "10-15欧/人"
