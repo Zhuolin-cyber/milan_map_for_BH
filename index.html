@@ -4,7 +4,9 @@
     <title>米兰干饭图</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" /> <!-- 引入外部样式文件 -->
+    <!-- <link rel="stylesheet" href="styles.css" /> 引入外部样式文件 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
 
@@ -36,6 +38,7 @@
 
     <!-- 引入外部 JavaScript 文件 -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="scripts.js"></script>
+    <!-- <script src="scripts.js"></script> -->
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
 </body>
 </html>

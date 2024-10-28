@@ -11,10 +11,16 @@ import json
 app = Flask(__name__)
 CORS(app, resources={r"/submit": {"origins": "*"}})
 
-
+@app.route('/')
+def index():
+    return render_template('index.html') 
+    
 # 定义一个路由，用于接收表单提交的数据
 @app.route('/submit', methods=['POST'])
 def submit_form():
+    print("Request headers:", request.headers)
+    print("Request data:", request.json)
+
     data = request.get_json()  # 获取表单数据（JSON 格式）
 
     # 获取具体字段的数据
