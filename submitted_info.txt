@@ -1,0 +1,8 @@
+{
+    "name": "本地电脑",
+    "location": "",
+    "type": "",
+    "address": "11",
+    "description": "1",
+    "price": ""
+}

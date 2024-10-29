@@ -167,7 +167,7 @@ var classmates = {
 const correctPassword = "dongzhuolin";  
 
 // 加载 JSON 数据
-fetch('data.json')
+fetch('/static/data.json')
   .then(response => response.json())
   .then(data => {
     // 添加饭店标记

@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS  # 导入 CORS
 import os  # 导入 os 模块来获取环境变量
 import schedule
