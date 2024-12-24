@@ -75,8 +75,7 @@ server {
     ssl_certificate_key /etc/letsencrypt/live/milano-map-dzl.asia/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-    # 添加以下 SSL 配置，确保使用正确的 TLS 版本和加密算法
-	ssl_protocols TLSv1 TLSv1.1;
+
 }
 server {
     if ($host = milano-map-dzl.asia) {

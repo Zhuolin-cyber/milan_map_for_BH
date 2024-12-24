@@ -7,9 +7,13 @@ import requests
 from threading import Thread
 import random
 import json
+from my_logging import configure_logging
 
 app = Flask(__name__)
 CORS(app, resources={r"/submit": {"origins": "*"}})
+
+# 调用日志配置函数
+configure_logging(app)
 
 @app.route('/')
 def index():
@@ -44,9 +48,24 @@ def submit_form():
     except:
         pass
     # 保存为 JSON 格式到 txt 文件中
-    file_path = os.path.join(os.getcwd(), 'submitted_info.txt')  # 当前文件夹
+    file_path = os.path.join(os.getcwd(), 'submitted_info.txt')
+
+    # 检查文件是否存在，读取已有内容
+    if os.path.exists(file_path):
+        with open(file_path, 'r', encoding='utf-8') as f:
+            try:
+                existing_data = json.load(f)  # 读取已有 JSON 数据
+            except json.JSONDecodeError:
+                existing_data = []  # 如果文件为空或格式错误，初始化为空列表
+    else:
+        existing_data = []  # 如果文件不存在，初始化为空列表
+
+    # 追加新的数据到列表
+    existing_data.append(data)
+
+    # 将更新后的数据重新写入文件
     with open(file_path, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
+        json.dump(existing_data, f, ensure_ascii=False, indent=4)
 
     # 可以返回给前端一些信息，告知提交成功
     return jsonify({"message": "提交成功", "status": "success"}), 200

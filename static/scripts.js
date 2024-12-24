@@ -87,6 +87,8 @@ legend.onAdd = function (map) {
     div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/890/890076.png" alt="pizza"> 火锅<br>';
     div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/2252/2252075.png" alt="cake"> 日料<br>';
     div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/3084/3084875.png" alt="cake"> 汤面<br>';
+    div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/128/837/837606.png" alt="cake"> 炸物<br>';
+    
     
     // div.innerHTML += '<img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="pizza"> 披萨店<br>';
     
@@ -136,6 +138,12 @@ var restaurantIcons = {
   }),
   "西餐": L.icon({
       iconUrl: 'https://cdn-icons-png.flaticon.com/128/2872/2872222.png',
+      iconSize: [25, 25],
+      iconAnchor: [12, 41],
+      popupAnchor: [0, -41]
+  }),
+  "炸物": L.icon({
+      iconUrl: 'https://cdn-icons-png.flaticon.com/128/837/837606.png',
       iconSize: [25, 25],
       iconAnchor: [12, 41],
       popupAnchor: [0, -41]

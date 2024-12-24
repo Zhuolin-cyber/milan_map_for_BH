@@ -180,7 +180,40 @@
       "address": "Viale Monza, 50, 20127 Milano MI",
       "description": "回国的感觉",
       "price": "10-20欧/人"
+    },
+    {
+      "name": "思源中国兰州牛肉面",
+      "location": [45.46201160625928, 9.191052835707275],
+      "type": "汤面",
+      "address": "Via Flavio Baracchini, 7, 20123",
+      "description": "牛肉面一绝，试试二柱子",
+      "price": "10-20欧/人"
+    },
+    {
+      "name": "Jollibee Milano",
+      "location": [45.462087421368594, 9.189964883936574],
+      "type": "炸物",
+      "address": "Piazza Armando Diaz, 7, 20123",
+      "description": "maybe世界第一炸鸡",
+      "price": "10-20欧/人"
+    },
+    {
+      "name": "Mr. Jiao",
+      "location": [45.48386592376301, 9.175094395577018],
+      "type": "汤面",
+      "address": "Via Messina, 20, 20154 Milano MI",
+      "description": "椒先生麻辣烫，不太辣，汤头很棒",
+      "price": "10-20欧/人"
+    },
+    {
+      "name": "Doppio Malto Milano Duomo",
+      "location": [45.46337156789379, 9.189778453248207],
+      "type": "西餐",
+      "address": "Via Dogana, 1, 20123 Milano MI",
+      "description": "能吃上一口热乎披萨，烤肉拼盘好吃",
+      "price": "20-30欧/人"
     }
+
   ]
   }
   
