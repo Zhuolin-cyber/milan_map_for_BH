@@ -55,6 +55,9 @@ def submit_form():
         with open(file_path, 'r', encoding='utf-8') as f:
             try:
                 existing_data = json.load(f)  # 读取已有 JSON 数据
+                # 如果不是列表，重置为列表
+                if not isinstance(existing_data, list):
+                    existing_data = []
             except json.JSONDecodeError:
                 existing_data = []  # 如果文件为空或格式错误，初始化为空列表
     else:
