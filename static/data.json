@@ -102,14 +102,6 @@
       "price": "30-40欧/人"
     },
     {
-      "name": "老孙家餐厅",
-      "location": [45.48625741055127, 9.223072283221393],
-      "type": "中餐",
-      "address": "Via Nicola Antonio Porpora, 59, 20131",
-      "description": "学长推荐",
-      "price": "10-20欧/人"
-    },
-    {
       "name": "西安 (Loreto)",
       "location": [45.48680538348697, 9.218269840892003],
       "type": "中餐",
@@ -211,6 +203,30 @@
       "type": "西餐",
       "address": "Via Dogana, 1, 20123 Milano MI",
       "description": "能吃上一口热乎披萨，烤肉拼盘好吃",
+      "price": "20-30欧/人"
+    },
+    {
+      "name": "Dream Korean Restaurant",
+      "location": [45.47497563647756, 9.211244226909818],
+      "type": "炸物",
+      "address": "谷歌地图不准，可直接搜店名",
+      "description": "炸鸡炸鸡，超好吃韩式炸鸡，天天同学的心中第一",
+      "price": "20-30欧/人"
+    },
+    {
+      "name": "Ristorante Taiwan",
+      "location": [45.4837101667911, 9.197590166740964],
+      "type": "中餐",
+      "address": "Via Adda, 10, 20124 Milano MI",
+      "description": "台湾菜很好吃，推荐五味豆腐和卤肉饭！",
+      "price": "20-30欧/人"
+    },
+    {
+      "name": "满满登登",
+      "location": [45.49971107087298, 9.183942683938339],
+      "type": "中餐",
+      "address": "Via Carlo Imbonati, 12, 20159 Milano MI",
+      "description": "主打东北菜，烧烤炸串都很香",
       "price": "20-30欧/人"
     }
 
