@@ -46,5 +46,45 @@
         "address": "Dream Korean Restaurant",
         "description": "炸鸡炸鸡，超好吃韩式炸鸡，第一了",
         "price": ""
+    },
+    {
+        "name": "酱香鳐鱼",
+        "location": "",
+        "type": "",
+        "address": "Mao hotpot毛灶火锅",
+        "description": "自助火锅\n人均30-40欧\n中午便宜一些但是菜会少\n晚上比较齐全推荐晚上去\n饮品要额外收费",
+        "price": ""
+    },
+    {
+        "name": "酱香鳐鱼",
+        "location": "",
+        "type": "",
+        "address": "La via della seta 大西北",
+        "description": "西北菜\n人均20-30欧",
+        "price": ""
+    },
+    {
+        "name": "酱香鳐鱼",
+        "location": "",
+        "type": "",
+        "address": "Ravioli Bao",
+        "description": "包子饺子小店（为了一顿大餐的话还是别跑啦\n人均1-10欧\n每周日休息\n",
+        "price": ""
+    },
+    {
+        "name": "酱香鳐鱼",
+        "location": "",
+        "type": "",
+        "address": "Sumire",
+        "description": "日餐\n咖喱饭好吃（但是只有中午菜单有\n晚上菜单的话就是些海鲜类\n人均10-20欧\n（好像饭点会没位子要提前预定？这个可以去求证一下不太清楚",
+        "price": ""
+    },
+    {
+        "name": "酱香鳐鱼",
+        "location": "",
+        "type": "",
+        "address": "YiKo DimSum一口砂锅",
+        "description": "Via Spadari, 8, 20123 Milano MI\n人均20-30欧\n味道不差\n就是不止砂锅 别的什么都做的挺好的店\n服务员好像只有一个中国人",
+        "price": ""
     }
 ]
