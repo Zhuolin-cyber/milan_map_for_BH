@@ -228,6 +228,62 @@
       "address": "Via Carlo Imbonati, 12, 20159 Milano MI",
       "description": "主打东北菜，烧烤炸串都很香",
       "price": "20-30欧/人"
+    },
+    {
+      "name": "La Hora Feliz",
+      "location": [45.459581027300246, 9.182934812772492],
+      "type": "西餐",
+      "address": "Via S. Vito, 5, 20123 Milano MI",
+      "description": "点一杯喝的（13欧起鸡尾酒），然后随便吃，提拉米苏很好吃，服务员也会拿着大盘子送菜",
+      "price": "10-20欧/人"
+    },
+    {
+      "name": "Mao Hotpot 毛灶火锅",
+      "location": [45.47981251738932, 9.173525840276065],
+      "type": "火锅",
+      "address": "Via Giuseppe Giusti, 41, 20154 Milano MI",
+      "description": "自助火锅，晚上菜品丰富但贵一点，饮品额外收费",
+      "price": "30-40欧/人"
+    },
+    {
+      "name": "YuanZi HotPot Porta Venezia",
+      "location": [45.478536045718016, 9.207889968489935],
+      "type": "火锅",
+      "address": "Via S. Gregorio, 6, 20124 Milano MI",
+      "description": "火锅自助，种类丰富，虾滑，牛蹄筋，猪蹄这些小菜都好吃",
+      "price": "30-40欧/人"
+    },
+    {
+      "name": "La via della seta 大西北",
+      "location": [45.48819450161556, 9.159708197429596],
+      "type": "中餐",
+      "address": "Via Cenisio, 68, 20154 Milano MI",
+      "description": "西北菜，羊肉，羊杂，土豆泥，手抓饭！",
+      "price": "20-30欧/人"
+    },
+    {
+      "name": "Ravioli Bao",
+      "location": [45.457116466086696, 9.208246603588412],
+      "type": "中餐",
+      "address": "Via Bergamo, 12, 20135 Milano MI",
+      "description": "包子饺子小店，不是大餐哦，周日休息",
+      "price": "1-10欧/人"
+    },
+    {
+      "name": "Sumire",
+      "location": [45.47915649398665, 9.184380226265269],
+      "type": "日料",
+      "address": "Via Varese, 1, 20121 Milano MI",
+      "description": "咖喱饭好吃（但是只有中午菜单有\n晚上菜单的话就是些海鲜类\n高峰期可能需要提前预定",
+      "price": "10-20欧/人"
+    },
+    {
+      "name": "YiKo DimSum一口砂锅",
+      "location": [45.46406481652829, 9.187001483936713],
+      "type": "汤面",
+      "address": "Via Spadari, 8, 20123 Milano MI",
+      "description": "味道不差\n不止砂锅 别的什么都做的挺好的店\n服务员好像只有一个中国人",
+      "price": "20-30欧/人"
     }
 
   ]
